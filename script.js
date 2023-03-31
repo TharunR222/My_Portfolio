@@ -1,3 +1,5 @@
+// =========================FORM SUBMISSION AND VALIDATION=========================
+
 const formSubmit = document.getElementById("form-submit");
 const emailEnt = document.getElementById("email");
 const nameEnt = document.getElementById("name");
@@ -41,8 +43,6 @@ commentsEnt.addEventListener("change",function(event){
 
 function save(name, email, comments) {
 
-  // From Validation 
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
     apiKey: "AIzaSyCgqkFGT3U6csUxnXF-5O71GCbxdjBD0Qk",
     authDomain: "my-portfolio-39d33.firebaseapp.com",
@@ -54,7 +54,6 @@ function save(name, email, comments) {
     measurementId: "G-KJZL473G6Q"
   };
 
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   const db = firebase.database().ref("Submitted-Form");
 
@@ -117,6 +116,9 @@ formSubmit.addEventListener("submit", function(event){
   submitFormData(name,email,comments);
 });
 
+
+
+// =========================PROJECT SECTION REDIRECT LINK, KEBAB MENU HANDLER=========================
 let ut_changer = document.getElementById("linkto-ut");
 let dt_changer = document.getElementById("linkto-dt");
 let ac_changer = document.getElementById("linkto-ac");
@@ -159,3 +161,72 @@ ac_changer.addEventListener("click", function(event){
   ac_changer.style.display = "none";
   kebab3.style.display = "";
 });
+
+// =========================NAV BAR RESPONSIVENESS HANDLER=========================
+
+let ul_list = document.querySelector(".ul-list");
+let hamburger = document.querySelector(".ham-nav");
+let body_scroll = document.querySelector(".body-scr");
+
+let nav_1 = document.getElementById("1");
+let nav_2 = document.getElementById("2");
+let nav_3 = document.getElementById("3");
+
+  nav_1.onclick = function() {
+    hamburger.classList.remove("active");
+    ul_list.classList.remove("active");
+    body_scroll.classList.remove("active1");
+  }
+  nav_2.onclick = function() {
+    hamburger.classList.remove("active");
+    ul_list.classList.remove("active");
+    body_scroll.classList.remove("active1");
+  }
+  nav_3.onclick = function() {
+    hamburger.classList.remove("active");
+    ul_list.classList.remove("active");
+    body_scroll.classList.remove("active1");
+  }
+
+
+
+  hamburger.onclick = function() {
+    hamburger.classList.toggle("active");
+    ul_list.classList.toggle("active");
+    body_scroll.classList.toggle("active1");
+}
+
+
+// =========================ANIMATION EFFECTS=========================
+
+ScrollReveal({
+  reser: true,
+  distance: '100px',
+  duration: 2500,
+  delay: 500
+});
+
+ScrollReveal().reveal('.nav-class',{origin:'top', delay: 100});
+ScrollReveal().reveal('.hero-text-hold',{origin:'bottom', delay: 300});
+ScrollReveal().reveal('.line-height-red',{origin:'left', delay: 400});
+ScrollReveal().reveal('.about-minor-div',{origin:'right', delay: 500});
+ScrollReveal().reveal('.chec1',{origin:'top', delay: 100});
+ScrollReveal().reveal('.skill-main-cont-fir',{origin:'left', delay: 200});
+ScrollReveal().reveal('.skill-main-cont-sec',{origin:'right', delay: 300});
+ScrollReveal().reveal('.chec2',{origin:'bottom', delay: 100});
+ScrollReveal().reveal('.c1',{origin:'left', delay: 200});
+ScrollReveal().reveal('.c2',{origin:'right', delay: 300});
+ScrollReveal().reveal('.c3',{origin:'left', delay: 400});
+ScrollReveal().reveal('.gts-main-section',{origin:'right', delay: 300});
+ScrollReveal().reveal('.foot-r1',{origin:'bottom', delay: 300});
+
+
+
+
+
+
+
+
+
+
+

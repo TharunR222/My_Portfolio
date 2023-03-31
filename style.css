@@ -7,82 +7,200 @@
 
 *{
     /* border: solid 1.5px; */
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
 }
 
-html, body{
+body{
     background-color: var(--primary);
-    width: 100%;
+    margin: 0;
+    padding: 0;
     height: 100vh;
-    margin: 0px;
-    padding: 0px;
     overflow-x: hidden; 
 }
 
-/* HERO SECTION */
+
+.body-scr.active1{
+    overflow-y: hidden;
+}
+
+/* ===========================================HERO SECTION========================================================= */
+.hero-main-section{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 
 #back-vid{
-    object-fit: fill;
+    position: absolute;
     right: 0;
     bottom: 0;
-    width: 100%;
-    height: 130vh;
 }
 
-.hero-hold{
-    position: relative;
+/* @media(min-aspect-ratio: 16/9){
+    #back-vid{
+        width: 100%;
+        height: auto;
+    }
 }
+
+@media(max-aspect-ratio: 16/9){
+    #back-vid{
+        width: auto;
+        height: 100%;
+    }
+} */
 
 .logo-hold-div{
-    position: absolute;
-    z-index: 20;
-    left: 3rem;
-    top: 2.8rem;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 70px;
+}
+
+.hero-text-hold{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: var(--secondary);
+    flex-wrap: wrap;
+    font-family: 'Manrope', sans-serif;
+    height: 100%;
 }
 
 .hero-hi{
-    position: absolute;
-    font-family: 'Manrope', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: lighter;
-    z-index: 20;
-    color: var(--secondary);
-    top: 15rem;
-    left: 43rem
 }
 
 .hero-main-text{
-    position: absolute;
     font-size: 88px;
     font-weight: bolder;
-    font-family: 'Manrope', sans-serif;
-    z-index: 20;
+}
+
+.nav-class{
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+}
+
+.ul-list{
+    list-style-type: none;
     color: var(--secondary);
-    top: 17rem;
-    left: 30rem;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    line-height: 65px;
+}
+
+.nav-li{
+    display: inline-block;
+    margin: 0 20px 0 60px;
+}
+
+.nav-a{
+    text-decoration: none;
+    padding: 5px;
+}
+
+.ham-nav{
+    z-index: 1;
+    display: none;
+    float: right;
+    cursor: pointer;
+    padding-top: 20px;
+    width: 90px;
+    height: 70px;
+}
+
+.lineg{
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: var(--secondary);
+}
+
+@media (max-width: 950px){
+
+    .hero-main-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-hold-div{
+        margin-top: 0;
+    }
+
+    .nav-class{
+        z-index: 9;
+    }
+
+    .ul-list{
+        display: flex;
+        flex-direction: column;
+        top: 70px;
+        left: -100%;
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        height: 100vh;
+        background-color: var(--hover);
+        transition: all 0.5s ease;
+    }
+
+    .ul-list.active{
+        left: 0;
+        transition: all 0.5s ease;
+    }
+
+    .nav-li{
+        margin: 0;
+    }
+
+    .ham-nav{
+        display: block;
+    }
+
+    .ham-nav.active .lineg:nth-child(2){
+        opacity: 0;
+    }
+
+    .ham-nav.active .lineg:nth-child(1){
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .ham-nav.active .lineg:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
 }
 
 .about{
-    top: 3.4rem;
-    left: 60rem;
-    position: absolute;
     color: var(--secondary);
-    z-index: 20;
-    text-decoration: none;
     font-family: 'Manrope', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     transition: all 1s ease;
 }
 
 .contact{
-    top: 3.4rem;
-    left: 67rem;
-    position: absolute;
     color: var(--secondary);
-    z-index: 20;
-    text-decoration: none;
     font-family: 'Manrope', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     transition: all 1s ease;
 }
@@ -93,15 +211,10 @@ html, body{
 }
 
 .resume{
-    top: 2.5rem;
-    left: 74.5rem;
     border-radius: 70px;
-    text-decoration: none;
     border: none;
-    position: absolute;
     background-color: var(--tertiary);
     color: black;
-    z-index: 20;
     font-size: 16px;
     font-family: 'Manrope', sans-serif;
     padding: 15px 32px;
@@ -112,25 +225,21 @@ html, body{
 }
 
 .resume:hover{
-    background-color: var(--hover);
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
-/* ABOUT SECTION */
+/* ===========================================ABOUT SECTION========================================================= */
 
 .about-main-section{
-    position: relative;
     background-color: var(--hover);
     font-family: 'Manrope', sans-serif;
     display: flex;
     width: 100%;
-    height: 110vh;
+    height: auto;
     flex-direction: column;
-    padding-top: 15rem;
-    margin-top: 0px;
-    /* border-radius: 50% 50% 0 0; */
-    /* transform: scaleX(1.5); */
-    z-index: 30;
-    top: -150px;
+    padding: 10rem 0 5rem 0;
+    margin-top: 0;
 }
 
 .maj-txt1, .maj-txt2{
@@ -138,7 +247,6 @@ html, body{
     font-weight: bolder;
     opacity: 0.8;
     color: var(--primary);
-    /* transform: scaleX(0.666); */
 }
 
 .maj-txt1{
@@ -152,6 +260,7 @@ html, body{
     background-color: var(--secondary);
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 0;
     margin: 0;
 }
@@ -161,17 +270,16 @@ html, body{
 }
 
 .about-minor-div{
-    text-indent: 50px;
-    /* transform: scaleX(0.666); */
     font-weight: 800;
     font-size: 24px;
     justify-content: center;
     align-items: center;
-    padding: 2rem 15rem 0 15rem;
+    padding: 2rem 12rem 0 12rem;
     line-height: 1.4;
+    text-align: center;
 }
 
-/* SKILLS SECTION */
+/* ===========================================SKILLS SECTION========================================================= */
 
 .check-text{
     font-family: 'Manrope', sans-serif;
@@ -179,6 +287,7 @@ html, body{
     font-weight: bold;
     font-size: 3rem;
     color: var(--hover);
+    margin-top: 5rem;
 }
 
 .img-size{
@@ -200,6 +309,7 @@ html, body{
 .r1-fir, .r1-sec, .r2-fir, .r2-sec{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     padding: 10px;
@@ -232,7 +342,12 @@ html, body{
     color: var(--hover)
 }
 
-/* PROJECT SECTION */
+/* ===========================================PROJECT SECTION========================================================= */
+
+.img-proj{
+    width: 100%;
+    background-size: cover;
+}
 
 .kebab-holder{
     display: flex;
@@ -258,10 +373,10 @@ html, body{
 
 .kebab-hold-changed{
     text-align: center;
+    line-height: 45px;
     background-color: var(--primary);
     width: 70px;
     height: 40px;
-    font-size: 30px;
     border-radius: 20px;
     opacity: 0.9;
     transition: all 0.2s ease;
@@ -288,7 +403,6 @@ html, body{
     justify-content: center;
     padding-top: 50px;
     gap: 50px;
-
 }
 
 .project-ent-main-section{
@@ -296,7 +410,6 @@ html, body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 180px;
 }
 
 .cont-hold-proj{
@@ -305,7 +418,7 @@ html, body{
     display: flex;
     flex-direction: row;
     background-color: var(--hover);
-    margin: 22px;
+    margin-top: 22px;
     justify-content: space-around;
     align-items: center;
     border-radius: 50px;
@@ -313,17 +426,38 @@ html, body{
 
 .img-hold-proj{
     display: flex;
-    height: 283px;
-    width: 283px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
     padding-left: 3rem;
     padding-right: 3rem;
+}
+
+@media (max-width: 990px) {
+
+    .entire-scroll-hold{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .cont-hold-proj{
+        width: 100%;
+    }
+
+    .img-hold-proj{
+        width: 40%;
+        background-size: cover;
+    }
 }
 
 .content-hold-proj{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: var(--primary);
     padding-right: 3rem;
+    width: 75%;
     padding-top: 70px;
     font-size: 20px;
     font-family: 'Manrope', sans-serif;
@@ -332,44 +466,85 @@ html, body{
 
 .in-cont-div{
     display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .check-text{
     text-align: center;
 }
 
-
-/* GET IN TOUCH SECTION */
-
-.gts-main-section{
-    /* position: relative; */
-    margin-top: 150px;
-    display: flex;
-    flex-direction: row;
-    background-color: var(--secondary);
-    border-radius: 100px;
-    height: 120vh;
-    justify-content: center;
-    align-items: center;
-    bottom: -85px;
-    z-index: 30;
-    margin-left: 15px;
-    margin-right: 20px;
+.l{
+    font-size: 25px;
 }
 
 
-#gts-back-vid{
-    width: 800px;
-    rotate: 90deg;
+/* ===========================================GET IN TOUCH SECTION========================================================= */
+
+.gts-main-section{
+    background-color: var(--primary);
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-hold-section {
+    position: relative;
+    bottom: -80px;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: var(--secondary);
+    padding-bottom: 100px;
+}
+
+.form-logo-hold{
+    height: 100px;
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+    padding: 0 0 0 4rem;
+}
+
+.logo-img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.git-txt{
+    font-size: 3rem;
+    font-family: 'Manrope', sans-serif;
+    color: var(--primary);
+}
+
+.form-hold{
+    width: 100%;
+}
+
+.s {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 30%;
+    padding-right: 30%;
+    gap: 50px;
 }
 
 #name{
     font-family: 'Manrope', sans-serif;
     border-radius: 30px;
-    width: 25rem;
+    width: 100%;
     height: 3.5rem;
-    display: block;
-    margin: 2rem 0 2rem 0;
     padding-left: 30px;
     color: var(--primary);
     border: solid 2.5px #E7E6E6;
@@ -378,10 +553,9 @@ html, body{
 #email{
     font-family: 'Manrope', sans-serif;
     border-radius: 30px;
-    width: 25rem;
+    width: 100%;
     height: 3.5rem;
     display: block;
-    margin: 2rem 0 2rem 0;
     padding-left: 30px;
     color: var(--primary);
     border: solid 2.5px #E7E6E6;
@@ -396,6 +570,7 @@ html, body{
     color: var(--primary);
     border: solid 2.5px #E7E6E6;
     resize: none;
+    width: 100%;
 }
 
 #message-content{
@@ -405,22 +580,8 @@ html, body{
     font-size: 20px;
 }
 
-
-.git-txt{
-    font-size: 3rem;
-    font-family: 'Manrope', sans-serif;
-    color: var(--primary);
-}
-
-.form-logo-hold{
-    height: 100px;
-    width: 100px;
-}
-
-.logo-img{
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
+.btn-form-hold{
+    text-align: center;
 }
 
 .form-btn{
@@ -430,8 +591,6 @@ html, body{
     font-size: 15px;
     width: 10rem;
     height: 3.5rem;
-    margin: 0.5rem 0 2rem 0;
-    padding-left: 10px;
     background-color: var(--hover);
     color: var(--primary);
     border: solid 2px #E7E6E6;
@@ -445,16 +604,16 @@ html, body{
     color: white;
 }
 
-
-/* FOOTER SECTION */
+/* ===========================================FOOTER SECTION========================================================= */
 
 .footer-main-section{
-    padding-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     gap: 100px;
+    padding-top: 200px;
+    background-color: black;
 }
 
 .fl{
@@ -468,40 +627,37 @@ html, body{
 .foot-r1{
     display: flex;
     flex-direction: row;
-    width: 80%;
+    justify-content: center;
+    gap: 20%;
+    width: 100%;
+    padding: 0 2%;
+    flex-wrap: wrap;
 }
 
 .foot-r2{
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-.foot-img-hold{
-    display: flex;
-    justify-content: center;
-    padding-right: 300px;
-    width: 50%;
-}
 
 .foot-img-logo{
     width: 100px;
 }
 
 .change-page-hold{
-    width: 50%;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 50px;
     color: var(--secondary);
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     font-size: 20px;
-    justify-content: center;
     align-items: center;
-    /* padding-right: 100px; */
 }
 
 .home-f, .about-f, .skills-f, .projects-f, .resume-f{
+    color: var(--secondary);
     cursor: pointer;
     position: relative;
     width: 100%;
@@ -549,327 +705,3 @@ html, body{
     font-size: 18px;
     opacity: 0.8;
 }
-
-
-/* ************************************************************MEDIA QUERY SECTION************************************************** */
-
-/* FOR MOBILE DEVICES (MAX WIDTH 480PX) */
-
-@media (max-width: 480px){
-    /* HERO SECTION */
-    #back-vid{
-        object-fit: cover;
-    }
-
-    .logo-hold-div{
-        left: 1rem;
-        top: 1rem;
-    }
-
-    .hero-hi{
-        font-size: 25px;
-        font-weight: lighter;
-        z-index: 20;
-        color: var(--secondary);
-        top: 15rem;
-        left: 12.5rem
-    }
-
-    .hero-main-text{
-        position: absolute;
-        font-size: 35px;
-        top: 17rem;
-        left: 7.8rem;
-    }
-
-    /* ABOUT SECTION */
-    .about-main-section{
-        height: auto;
-        padding-top: 4rem;
-        margin-top: 0px;
-        border-radius: 0;
-        padding-bottom: 30px;
-    }
-    
-    .maj-txt1, .maj-txt2{
-        font-size: 5rem;
-    }
-    
-    .about-minor-div{
-        transform: scaleX(0.666);
-        font-weight: 100;
-        font-size: 19px;
-        padding: 1rem 1rem 0 1rem;
-        line-height: 1.4;
-    }
-
-    /* SKILLS SECTION */
-    .img-size{
-        width: 35%;
-    }
-    
-    
-    .skill-main-cont-fir, .skill-main-cont-sec{
-        flex-wrap: wrap;
-        padding: 1rem 1rem;
-        margin: 3rem 2.5rem;
-    }
-    
-    .r1-fir, .r1-sec, .r2-fir, .r2-sec{
-        flex-wrap: wrap;
-        padding: 0px;
-    }
-    
-    .hold{
-        width: 100px;
-        height: 110px;
-        padding: 0;
-        margin: 15px;
-    }
-    
-    
-    .txt-hold-skill{
-        font-family: 'Manrope', sans-serif;
-        font-size: 0.6rem;
-        font-weight: 100;
-        letter-spacing: 2px;
-        color: var(--hover)
-    }
-
-    /* PROJECT SECTION */
-    .kebab-holder{
-        padding-top : 10px;
-        padding-right: 20px;
-    }
-    
-    .kebab-hold{
-        display: flex;
-        flex-direction: row;
-        gap: 6px;
-        background-color: var(--primary);
-        width: 50px;
-        height: 30px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px;
-        opacity: 0.9;
-        transition: all 0.2s ease;
-        cursor: pointer;
-    }
-    
-    .kebab-hold-changed{
-        display: flex;
-        background-color: var(--primary);
-        width: 50px;
-        height: 35px;
-        border-radius: 20px;
-        opacity: 0.9;
-        transition: all 0.2s ease;
-        cursor: pointer;
-    }
-    
-    
-    .kebab-hold:hover{
-        gap: 9px
-    }
-    
-    .line-k{
-        width: 6px;
-        height: 6px;
-        background-color: var(--secondary);
-        border-radius: 3px;
-    }
-
-    .l{
-        font-size: 20px;
-    }
-    
-    .entire-scroll-hold{
-        padding-top:30px;
-        gap: 50px;
-    }
-    
-    .project-ent-main-section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 30px;
-    }
-    
-    .cont-hold-proj{
-        width: 90%;
-        height: 300px;
-        display: flex;
-        flex-direction: row;
-        background-color: var(--hover);
-        margin: 22px;
-        justify-content: space-around;
-        align-items: center;
-        border-radius: 50px;
-    }
-    
-    .img-proj{
-        width: 100px;
-        height: 100px;
-    }
-
-    .img-hold-proj{
-        height: 50px;
-        width: 50px;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .content-hold-proj{
-        padding-right: 1.5rem;
-        padding-top: 35px;
-        font-size: 12px;
-        padding-bottom: 2.5rem;
-    }
-
-    .check-text{
-        font-size: 2rem;
-    }
-
-    /* GET IN TOUCH SECTION */
-    .gts-main-section{
-        margin-top: 120px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 50px;
-        height: auto;
-        bottom: -85px;
-        z-index: 30;
-        width: 100%;
-    }
-    
-    
-    #gts-back-vid{
-        width: 410px;
-        border-radius: 35px;
-        height: auto;
-        rotate: 0deg;
-    }
-    
-    #name{
-        font-family: 'Manrope', sans-serif;
-        border-radius: 30px;
-        width: 23rem;
-        height: 3.5rem;
-        display: block;
-        margin: 2rem 0 2rem 0;
-        padding-left: 30px;
-        color: var(--primary);
-        border: solid 2.5px #E7E6E6;
-    }
-    
-    #email{
-        font-family: 'Manrope', sans-serif;
-        border-radius: 30px;
-        width: 23rem;
-        height: 3.5rem;
-        display: block;
-        margin: 2rem 0 2rem 0;
-        padding-left: 30px;
-        color: var(--primary);
-        border: solid 2.5px #E7E6E6;
-    }
-    
-    #comm{
-        font-family: 'Manrope', sans-serif;
-        border-radius: 10px;
-        display: block;
-        padding-top: 10px;
-        padding-left: 15px;
-        color: var(--primary);
-        border: solid 2.5px #E7E6E6;
-        resize: none;
-    }
-    
-    
-    .git-txt{
-        font-size: 3rem;
-        font-family: 'Manrope', sans-serif;
-        color: var(--primary);
-    }
-    
-    .form-logo-hold{
-        height: 100px;
-        width: 100px;
-        padding-top: 10px;
-        padding-left: 10px;
-        border-radius: 100px;
-    }
-    
-    .logo-img{
-        max-width: 100%;
-        max-height: 100%;
-        display: block;
-        border-radius: 40px;
-    }
-
-    /* FOOTER SECTION */
-    .footer-main-section{
-        padding-top: 150px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        gap: 40px;
-    }
-    
-    .foot-r1{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .foot-r2{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .foot-img-hold{
-        display: block;
-        text-align: center;
-        padding-right: 0px;
-        width: 100%;
-    }
-    
-    .foot-img-logo{
-        width: 100px;
-    }
-    
-    .change-page-hold{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-        color: var(--secondary);
-        font-family: 'Manrope', sans-serif;
-        font-weight: 200;
-        font-size: 15px;
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
-        padding-top: 40px;
-    }
-    
-    .home-f, .about-f, .skills-f, .projects-f, .resume-f{
-        cursor: pointer;
-        position: relative;
-        width: 100%;
-    } 
-
-    .foot-logo-hold-section{
-        gap: 30px;
-        font-size: 15px;
-    }
-    
-}
-/* FOR TABLET DEVICES (MAX WIDTH 768PX) */

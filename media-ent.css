@@ -1,0 +1,358 @@
+/* ************************************************************MEDIA QUERY************************************************** */
+
+/* ====================================FOR TABLET DEVICES (MAX WIDTH 768PX)==================================== */
+
+@media (max-width: 950px){
+    /* ===========================================HERO SECTION========================================================= */
+
+
+    /* ===========================================ABOUT SECTION========================================================= */
+    
+    .about-main-section{
+        padding-top: 4rem;
+        margin-top: 0px;
+        padding-bottom: 4rem;
+    }
+    
+    .maj-txt1, .maj-txt2{
+        font-size: 8rem;
+    }
+    
+    .about-minor-div{
+        font-weight: 700;
+        font-size: 22px;
+        padding: 2rem 4rem 0 4rem;
+        line-height: 1.5;
+    }
+
+    /* ===========================================SKILLS SECTION========================================================= */
+    
+    .img-size{
+        width: 40%;
+    }
+    
+    
+    .skill-main-cont-fir, .skill-main-cont-sec{
+        padding: 1.5rem 1.5rem;
+        margin: 3rem 2.5rem;
+    }
+    
+    .r1-fir, .r1-sec, .r2-fir, .r2-sec{
+        padding: 10px;
+    }
+    
+    .hold{
+        width: 120px;
+        height: 120px;
+        margin: 7px;
+    }
+    
+    
+    .txt-hold-skill{
+        font-size: 0.6rem;
+        font-weight: 100;
+    }
+
+    /* ===========================================PROJECT SECTION========================================================= */
+
+    .check-text{
+        font-size: 3rem;
+        padding: 0 10px;
+    }
+
+    /* ===========================================GET IN TOUCH SECTION========================================================= */
+
+    .s{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .gts-main-section{
+        padding-top: 80px;
+    }
+    
+    .git-txt{
+        font-size: 2rem;
+    }
+    
+    .form-logo-hold{
+        margin: 1.5rem 0 2rem 0;
+        padding: 0 0 0 1rem;
+    }
+
+    .logo-img{
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        border-radius: 40px;
+    }
+
+    .form-hold-section{
+        border-radius: 20px;
+        padding-bottom: 50px;
+    }
+
+    /* ===========================================FOOTER SECTION========================================================= */
+    .footer-main-section{
+        padding-top: 150px;
+        gap: 100px;
+    }
+    
+    .foot-r1{
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    /* Screen size extends without including the below(Not an issue bcz of this)*/
+    /* .foot-r2{
+        display: flex;
+        flex-direction: column;
+    } */
+    
+    .foot-img-hold{
+        display: block;
+        text-align: center;
+        padding-right: 0px;
+        width: 100%;
+    }
+    
+    .foot-img-logo{
+        width: 80px;
+    }
+    
+    .change-page-hold{
+        flex-direction: column;
+        gap: 20px;
+        color: var(--secondary);
+        font-weight: 200;
+        font-size: 15px;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .home-f, .about-f, .skills-f, .projects-f, .resume-f{
+        cursor: pointer;
+        position: relative;
+        width: fit-content;
+    } 
+
+    .foot-logo-hold-section{
+        gap: 30px;
+        font-size: 15px;
+    }
+    
+}
+
+/* ====================================FOR MOBILE DEVICES (MAX WIDTH 480PX)==================================== */
+
+@media (max-width: 700px){
+    /* ===========================================HERO SECTION========================================================= */
+
+
+    .logo-hold-div{
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .hero-hi{
+        font-size: 25px;
+        color: var(--secondary);
+    }
+
+    .hero-main-text{
+        font-size: 35px;
+    }
+
+    /* ===========================================ABOUT SECTION========================================================= */
+    
+    .about-main-section{
+        padding-top: 4rem;
+        margin-top: 0px;
+        padding-bottom: 50px;
+    }
+    
+    .maj-txt1, .maj-txt2{
+        font-size: 5rem;
+    }
+    
+    .about-minor-div{
+        font-weight: 100;
+        font-size: 18px;
+        padding: 1.5rem 2rem 0 2rem;
+        line-height: 1.4;
+    }
+
+    /* ===========================================SKILLS SECTION========================================================= */
+    
+    .img-size{
+        width: 30%;
+    }
+    
+    
+    .skill-main-cont-fir, .skill-main-cont-sec{
+        padding: 0.5rem 0.5rem;
+        margin: 3rem 0.8rem;
+    }
+    
+    .r1-fir, .r1-sec, .r2-fir, .r2-sec{
+        padding: 0px;
+    }
+    
+    .hold{
+        width: 120px;
+        height: 120px;
+        margin: 7px;
+    }
+    
+    
+    .txt-hold-skill{
+        font-size: 0.6rem;
+        font-weight: 100;
+    }
+
+    /* ===========================================PROJECT SECTION========================================================= */
+    
+    .kebab-holder{
+        padding-top : 10px;
+        padding-right: 20px;
+    }
+    
+    .kebab-hold{
+        width: 50px;
+        height: 30px;
+    }
+    
+    .kebab-hold-changed{
+        line-height: 40px;
+        width: 50px;
+        height: 35px;
+    }
+    
+    .line-k{
+        width: 5px;
+        height: 5px;
+    }
+
+    .l{
+        font-size: 20px;
+    }
+    
+    .cont-hold-proj{
+        width: 100%;
+        height: fit-content;
+        margin: 20px;
+    }
+    
+
+    .img-hold-proj{
+        width: 70%;
+        background-size: cover;
+    }
+    
+    .content-hold-proj{
+        padding-right: 1.5rem;
+        padding-top: 35px;
+        font-size: 12px;
+        padding-bottom: 1.5rem;
+    }
+
+    .check-text{
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+
+    .in-cont-div{
+        font-size: 18px;
+
+    }
+
+    .txt-hold-proj{
+        font-size: 12px;
+    }
+
+    
+
+    /* ===========================================GET IN TOUCH SECTION========================================================= */
+
+    .s{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .gts-main-section{
+        padding-top: 80px;
+    }
+    
+    .git-txt{
+        font-size: 2rem;
+    }
+    
+    .form-logo-hold{
+        margin: 1.5rem 0 2rem 0;
+        padding: 0 0 0 1rem;
+    }
+
+    .logo-img{
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        border-radius: 40px;
+    }
+
+    .form-hold-section{
+        border-radius: 20px;
+        padding-bottom: 50px;
+    }
+
+    /* ===========================================FOOTER SECTION========================================================= */
+    .footer-main-section{
+        padding-top: 150px;
+        gap: 100px;
+    }
+    
+    .foot-r1{
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    /* Screen size extends without including the below(Not an issue bcz of this)*/
+    /* .foot-r2{
+        display: flex;
+        flex-direction: column;
+    } */
+    
+    .foot-img-hold{
+        display: block;
+        text-align: center;
+        padding-right: 0px;
+        width: 100%;
+    }
+    
+    .foot-img-logo{
+        width: 80px;
+    }
+    
+    .change-page-hold{
+        flex-direction: column;
+        gap: 20px;
+        color: var(--secondary);
+        font-weight: 200;
+        font-size: 15px;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .home-f, .about-f, .skills-f, .projects-f, .resume-f{
+        cursor: pointer;
+        position: relative;
+        width: fit-content;
+    } 
+
+    .foot-logo-hold-section{
+        gap: 30px;
+        font-size: 15px;
+    }
+    
+}

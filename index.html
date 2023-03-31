@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,6 +12,7 @@
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-ent.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- LOGOS -->
@@ -23,10 +26,10 @@
 </head>
 
 
-<body>
+<body class="body-scr">
     <!-- HERO SECTION -->
-    <div class="hero-main-section">
-        <div class="hero-hold">
+    <div class="hero-main-section" id = "home-go">
+        <nav class="nav-class">
             <div class="logo-hold-div">
                 <svg width="138" height="46" viewBox="0 0 138 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_2_29)">
@@ -47,21 +50,33 @@
                     </defs>
                 </svg>                           
             </div>
+
+            <ul class="ul-list">
+                <li class="nav-li" id = 1><a href="#about-go" class = "nav-a about">About</a></li>
+                <li class="nav-li" id = 2><a href="#get-go" class = "nav-a contact">Contact</a></li>
+                <li class="nav-li" id = 3><a href="https://drive.google.com/file/d/1cMXpInyK1xn_6s-FQRWhRD3rsELOU-8k/view?usp=share_link" target="_blank" style="text-decoration: none;"><button class = "nav-a resume">Resume</button></li></a>
+
+            </ul>
+
+            <div class="ham-nav">
+                <span class="lineg"></span>
+                <span class="lineg"></span>
+                <span class="lineg"></span>
+            </div>
+        </nav>
+
+        <video autoplay muted loop plays-inline id="back-vid">
+            <source src="assets/videos/hero-background.mp4" type="video/mp4">
+        </video>
+
+        <div class = hero-text-hold>
             <span class="hero-hi">Hi!</span>
             <span class="hero-main-text">I'm Tharun</span>
-            <!-- <a href="#" class = "about">About</a>
-            <a href="#" class = "contact">Contact</a>
-            <button class = "resume">Resume</button> -->
-            <div>
-                <video autoplay muted loop id="back-vid">
-                    <source src="assets/videos/hero-background.mp4" type="video/mp4">
-                </video>
-            </div>
         </div>
     </div>
 
     <!-- ABOUT SECTION -->
-    <div class="about-main-section">
+    <div class="about-main-section" id = "about-go">
         <div class="line-height-red">
             <span class="maj-txt1">Who</span>
             <span class="maj-txt2">Am I</span>
@@ -74,8 +89,8 @@
     </div>
 
     <!-- SKILLS SECTION -->
-    <div class="skills-main-section">
-        <div class="check-text">
+    <div class="skills-main-section" id = "skill-go">
+        <div class="check-text chec1">
             Check out my skills
         </div>
         <div class="skill-main-cont-fir">
@@ -152,13 +167,13 @@
     </div>
 
     <!-- PROJECT SECTION -->
-    <div class="project-ent-main-section">
-        <div class="check-text">
+    <div class="project-ent-main-section" id = "project-go">
+        <div class="check-text chec2">
             Check out some of my projects!!!
         </div>
 
         <div class="entire-scroll-hold">
-            <div class="cont-hold-proj">
+            <div class="cont-hold-proj c1">
                 <div class="img-hold-proj">
                     <img src="assets/images/UT.png" alt="Understanding Things" class="img-proj">
                 </div>
@@ -182,7 +197,7 @@
                 </div>
             </div>
     
-            <div class="cont-hold-proj">
+            <div class="cont-hold-proj c2">
                 <div class="img-hold-proj">
                     <img src="assets/images/DownTube.png" alt="DownTube" class="img-proj">
                 </div>
@@ -206,7 +221,7 @@
                 </div>
             </div>
     
-            <div class="cont-hold-proj">
+            <div class="cont-hold-proj c3">
                 <div class="img-hold-proj">
                     <img src="assets/images/IClassify.png" alt="Image Classification" class="img-proj">
                 </div>
@@ -233,7 +248,7 @@
     </div>
 
     <!-- GET IN TOUCH SECTION -->
-    <div class="gts-main-section">
+    <div class="gts-main-section" id = "get-go">
         <div class="form-hold-section">
             <div class="form-logo-hold">
                 <img src="assets/images/form_logo.png" alt="Form Logo" class="logo-img">
@@ -241,22 +256,22 @@
             <div class="form-git-hold">
                 <h1 class="git-txt">Get In Touch!!!</h1>
             </div>
-            <form id="form-submit">
-                <input type="text" placeholder="Name" id="name">
-                <input type="email" placeholder="Email" id="email">
-                <textarea id="comm" cols="55" rows="10" placeholder="Comments/Questions"></textarea>
+            <!-- <div class="test"> -->
 
-                <p id="message-content"></p>
-                <div class="btn-form-hold" style="text-align: center;">
-                    <button class="form-btn" type="submit" id="form-btn-js">Send</button>
-                </div>
-            </form>
+            <div class = "form-hold">
+                <form id="form-submit" class="s">
+                    <input type="text" placeholder="Name" id="name">
+                    <input type="email" placeholder="Email" id="email">
+                    <textarea id="comm" cols="55" rows="10" placeholder="Comments/Questions"></textarea>
+    
+                    <p id="message-content"></p>
+                    <div class="btn-form-hold">
+                        <button class="form-btn" type="submit" id="form-btn-js">Send</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="gts-vid-hold-section">
-            <video autoplay muted loop id="gts-back-vid">
-                <source src="assets/videos/form-back.mp4" type="video/mp4">
-            </video>
-        </div>
+        
     </div>
 
     <!-- FOOTER SECTION -->
@@ -267,11 +282,11 @@
             </div>
     
             <div class="change-page-hold">
-                <p class="home-f">Home</p>
-                <p class="about-f">About</p>
-                <p class="skills-f">Skills</p>
-                <p class="projects-f">Projects</p>
-                <p class="resume-f">Resume</p>
+                <a href="#home-go" style="text-decoration: none;"><p class="home-f">Home</p></a>
+                <a href="#about-go" style="text-decoration: none;"><p class="about-f">About</p></a>
+                <a href="#skill-go" style="text-decoration: none;"><p class="skills-f">Skills</p></a>
+                <a href="https://drive.google.com/file/d/1cMXpInyK1xn_6s-FQRWhRD3rsELOU-8k/view?usp=share_link" target="_blank" style="text-decoration: none;"><p class="resume-f">Resume</p></a>
+                <a href="#project-go" style="text-decoration: none;"><p class="projects-f">Projects</p></a>
             </div>
         </div>
         
@@ -287,7 +302,7 @@
                 <p class="final-stat-text">Designed and Developed by Tharun R</p>
             </div>
         </div>
-    </div> 
+    </div>
 
     <script src="script.js"></script>
 </body>
