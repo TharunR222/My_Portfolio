@@ -42,7 +42,7 @@ body{
     bottom: 0;
 }
 
-/* @media(min-aspect-ratio: 16/9){
+@media(min-aspect-ratio: 16/9){
     #back-vid{
         width: 100%;
         height: auto;
@@ -54,7 +54,7 @@ body{
         width: auto;
         height: 100%;
     }
-} */
+}
 
 .logo-hold-div{
     display: flex;
