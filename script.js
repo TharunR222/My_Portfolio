@@ -199,9 +199,17 @@ let nav_3 = document.getElementById("3");
 
 // =========================ANIMATION EFFECTS=========================
 
+let d = "60px";
+if(window.innerWidth < 1408){
+  d = "0px";
+}
+else{
+  d = "60px";
+}
+
 ScrollReveal({
   reset: false,
-  distance: '10px',
+  distance: d,
   duration: 2500,
   delay: 500
 });
