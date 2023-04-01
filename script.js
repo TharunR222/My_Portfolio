@@ -200,9 +200,9 @@ let nav_3 = document.getElementById("3");
 // =========================ANIMATION EFFECTS=========================
 
 ScrollReveal({
-  reser: true,
-  distance: '100px',
-  duration: 2500,
+  reset: false,
+  distance: '10px',
+  duration: 250,
   delay: 500
 });
 
@@ -219,14 +219,3 @@ ScrollReveal().reveal('.c2',{origin:'right', delay: 300});
 ScrollReveal().reveal('.c3',{origin:'left', delay: 400});
 ScrollReveal().reveal('.gts-main-section',{origin:'right', delay: 300});
 ScrollReveal().reveal('.foot-r1',{origin:'bottom', delay: 300});
-
-
-
-
-
-
-
-
-
-
-
