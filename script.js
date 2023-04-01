@@ -202,7 +202,7 @@ let nav_3 = document.getElementById("3");
 ScrollReveal({
   reset: false,
   distance: '10px',
-  duration: 250,
+  duration: 2500,
   delay: 500
 });
 
